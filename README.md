@@ -29,7 +29,7 @@ Ideal for football analytics enthusiast or anyone passionate about making data-d
 
 ### Option 1: Run the Standalone `.exe`
 
-1. Download `Evaluation_Engine.exe` from the [Releases](#) section.
+1. Download `Evaluation_Engine.exe` from the [Releases] [Evaluation Engine.exe](https://github.com/AKoronaios/Player-Evaluation-Engine/releases/download/v1.0.0/Evaluation.Engine.exe) section.
 2. Double-click to launch the app.
 3. No Python or dependencies required.
 
