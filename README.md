@@ -16,6 +16,7 @@ Ideal for football analytics enthusiast or anyone passionate about making data-d
 
 - **🔍 Set UP Filters**  
   Filter players based on nationality, division, age range, salary, and playing positions using an intuitive GUI.
+  (You may need to make the filter window bigger to see the Apply Filters button)
 
 - **⚙️ Select Stats & Weights**  
   Select from a wide array of player stats and assign custom weights to prioritize what's important for your analysis.
