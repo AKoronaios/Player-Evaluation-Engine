@@ -12,7 +12,7 @@ Ideal for football analytics enthusiast or anyone passionate about making data-d
 ## 🚀 Features
 
 - **🔄 Load & Clean Data**  
-  Import HTML file extracted from Football Manager (use the upload Evalution Engine Scout View.fmf) and automatically clean and prepare the dataset.
+  Import HTML file extracted from Football Manager (use the upload [Evalution Engine Scout View.fmf](https://github.com/AKoronaios/Player-Evaluation-Engine/raw/refs/heads/main/fmf-files/Evalution%20Engine%20Scout%20View.fmf) and automatically clean and prepare the dataset.
 
 - **🔍 Set UP Filters**  
   Filter players based on nationality, division, age range, salary, and playing positions using an intuitive GUI.
