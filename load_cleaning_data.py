@@ -105,18 +105,18 @@ def load_cleaning_data(data_path,free_agent_day='30/6/2026'):
             df_stats[column] = df_stats[column].apply(str).str.replace('-','0')
     
     # Clean and convert 'Salary' column
-    df_stats['Salary'] = df_stats['Salary'].apply(str).str.replace('p/a','')
+    df_stats['Salary'] = df_stats['Salary'].apply(str).str.replace(r'\b[pP]/[aAmMwW]\b', '', regex=True)
     df_stats['Salary'] = df_stats['Salary'].apply(str).str.replace('nan','-')
     df_stats['Salary'] = df_stats['Salary'].apply(str).str.replace(',','')
-    df_stats['Salary'] = df_stats['Salary'].apply(str).str.replace('€','')
+    df_stats['Salary'] = df_stats['Salary'].apply(str).str.replace(r'[€$£]','',regex=True)
     df_stats['Salary'] = df_stats['Salary'].replace('-', 0).astype(int)
     
     # Clean and convert 'Transfer Value' column
-    df_stats['Transfer Value'] = df_stats['Transfer Value'].apply(str).str.replace('€','')
+    df_stats['Transfer Value'] = df_stats['Transfer Value'].apply(str).str.replace(r'[€$£]','',regex=True)
     df_stats['Transfer Value'] = df_stats['Transfer Value'].apply(str).str.replace('M','000000')
     df_stats['Transfer Value'] = df_stats['Transfer Value'].apply(str).str.replace('K','000')
     df_stats['Transfer Value'] = df_stats['Transfer Value'].replace('Unknown','np.nan')
-    df_stats['Transfer Value'] = df_stats['Transfer Value'].replace('Not for Sale', 100_000_000)
+    df_stats['Transfer Value'] = df_stats['Transfer Value'].replace('Not for Sale', 1_000_000_000)
     # Apply the function to compute means
     df_stats['Transfer Value'] = df_stats['Transfer Value'].apply(compute_mean)
 
